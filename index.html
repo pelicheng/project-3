@@ -3,12 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scatter Plot</title>
+    <title>Project 3</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
   </head>
   <body>
     <h3>Average Heart Rate VS. Average Glucose Level in a Single Day</h3>
     <svg width="800" height="600"></svg>
+    <hr>
+    <p>
+      <b>Question 1: A rationale for your design decisions. How did you choose your particular visual encodings and interaction techniques? What alternatives did you consider and how did you arrive at your ultimate choices?</b><br>
+      We decided to go for a demographic graph to show our visual story to show visual encodings and interaction techniques for our project on diabetes impact across different demographics. Initially, we explored many visual forms such as heatmaps and line graphs. However, after iterative discussions and mockups, the demographic graph stood out for its directness in showing data distribution and its effectiveness in engaging our target audience. We were motivated to do so because it seems quite meaningful to see what demographics are more prone to high average heart rate and glucose levels to see if there is inequality in healthcare. <br>
+      For filtering, we grouped by different demographics based on race, by having a tooltip for Age, Gender, BMI, Body weight, Height, Heart Rate for each person’s point up there. We believed this approach best represented the data’s narrative, clearly highlighting trends and disparities within the population affected by diabetes. And interactively the user can click on each group and each point and also zoom in, which we think really shows each section of the graph. This answers the bigger question of: how are different races/demographics more prone to certain illnesses like diabetes? 
+      <br><br>
+
+      <b>Question 2: An overview of your development process. Describe how the work was split among the team members. Include a commentary on the development process, including answers to the following questions: Roughly how much time did you spend developing your application (in people-hours)? What aspects took the most time?</b>
+      <br>
+      Work Divided: <br>
+      Sadrac -> Hourly Glucose trends, Heart Rate Variability Among Patients, Data Cleaning, Adding tool tip, working on zoom in feature <br>
+      Selina -> Static Scatter Plot: Cholesterol vs Fasting Glucose, Distribution on Fasting Glucose, working on zoom in feature, write-up <br>
+      Peiling -> Average heart rate plot, Data Visualization, code cleaning, Github page publication <br>
+      <br>
+      Step 1: Data Exploration on What we Can do with the data
+      <ul>
+        <li>Time: Peiling - 5 hours, Selina - 5 hours, Sadrac - 5 hours</li>
+        <li>Tasks: Our first step involved data cleaning and drawing exploratory graphs. This was crucial to ensure the accuracy and usability of the data for visualization. Everyone verifies data integrity, normalizing values, and formatting everything for the subsequent visualization stages. Each person explored 1-2 graphs.</li>
+        <li>We began by brainstorming various visualization techniques, including interactive graphs that combine hourly glucose fluctuations, heart rate variability, and patient demographics. A major focus is understanding how factors like heart rate demographics influence glucose regulation and whether there are patterns that can help predict or manage diabetes more effectively. This exploration is particularly relevant for personalized medicine, where patient-specific insights can lead to better treatment plans. We further explored the average heart rate and glucose levels among different demographics, and we think putting this on both axes can together show what ethnicities are more prone to health issues like diabetes as glucose levels and average heart rate are major diabetes cause factors.
+        </li>
+        <li>To increase the interactive nature of our graphs, we thought about implementing interactive sliders and filters that will allow users to adjust variables such as time of day, age group, and weight range. This feature is especially valuable in clinical settings, where quick adjustments can help tailor insights to individual patient needs.
+        </li>
+      </ul>
+
+      Step 2: Making the interactive graph
+      <ul>
+        <li>Hours: 5 hours (Sadrac, Peiling, Selina)
+        </li>
+        <li>Tasks: For this second part, we mainly spent time on the design and coding of the average heart rate and glucose level scatter plot. Crafting the axes, scaling, and plotting data points required meticulous attention to detail. One particular challenge was implementing the zoom functionality. Keeping the axes static while allowing for dynamic data exploration pushed our technical capabilities but was ultimately rewarding. This part took the most time. A scatter plot with the features were the easiest for the human eye to see, and were also friendly even to color-blind people for the colors our graphs used. The zoom in features were very helpful to see more specifically which category that patient belonged to. 
+        </li>
+      </ul>
+
+      Step 3: Refinement and adding new features
+      <ul>
+        <li>Hours: Peiling - 5 hours, Selina - 5 hours, Sadrac - 5 hours
+        </li>
+        <li>Tasks: We spent time investigating how we can improve our current graphs, enhancing user interaction through tooltips and hover effects, alongside polishing the overall aesthetic and usability of the application. In order to ensure a consistent user experience, we tested the visualization of our website across all our devices. 
+        </li>
+        <li>For this section, we worked together each exploring different ways that we can make our current visualization more interactive. We ended up adding a tooltip, making each ethnicity hovering, and enhanced our zooming in and out features.</li>
+      </ul>
+      We spent roughly 20 hours in total for this project. Among the many phases, data preprocessing and the zoom functionality's implementation took us the longest in terms of time and complexity. However, we believe these steps were very helpful for a robust visualization. We each explored many ways of visualizing the heart rate and glucose levels using different graphs and ways of visualizing, and eventually settled with the current scatter graph with different functionalities we have.
+
+    </p>
     <script src="graph1.js"></script>
     <style>
       .tooltip {
