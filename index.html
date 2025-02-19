@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scatter Plot</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <h3>Average Heart Rate VS. Average Glucose Level in a Single Day</h3>
+    <svg width="800" height="600"></svg>
+    <script src="graph1.js"></script>
+    <style>
+      .tooltip {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+        font-size: 12px;
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+    </style>
+    <div id="tooltip" class="tooltip"></div>
+  </body>
+</html>
