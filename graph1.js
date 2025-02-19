@@ -280,7 +280,7 @@
 let allData = [];
 
 function loadChunkData(chunkNumber) {
-  return d3.json(`../../chunks/chunk_${chunkNumber}.json`).then(function (data) {
+  return d3.json(`chunks/chunk_${chunkNumber}.json`).then(function (data) {
     allData = allData.concat(data);  // Add the data from the current chunk to the allData array
 
     // Process data when the last chunk is loaded
